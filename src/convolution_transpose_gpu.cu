@@ -41,6 +41,9 @@
 #include <pybind11/pybind11.h>
 #include <torch/extension.h>
 
+#include <thrust/unique.h>
+#include <thrust/remove.h>
+
 namespace minkowski {
 
 template <typename coordinate_type,
