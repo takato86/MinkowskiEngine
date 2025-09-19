@@ -23,7 +23,11 @@
 # of the code.
 import os
 import numpy as np
-from collections import Sequence
+try:
+    from collections import Sequence
+except ImportError:
+    from collections.abc import Sequence
+
 from typing import Union, List, Tuple
 
 import torch

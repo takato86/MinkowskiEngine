@@ -22,7 +22,11 @@
 # Please cite "4D Spatio-Temporal ConvNets: Minkowski Convolutional Neural
 # Networks", CVPR'19 (https://arxiv.org/abs/1904.08755) if you use any part
 # of the code.
-from collections import Sequence
+try:
+    from collections import Sequence
+except ImportError:
+    from collections.abc import Sequence
+
 import numpy as np
 from typing import Union
 

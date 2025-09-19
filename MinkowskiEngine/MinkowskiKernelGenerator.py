@@ -23,7 +23,12 @@
 # Networks", CVPR'19 (https://arxiv.org/abs/1904.08755) if you use any part
 # of the code.
 import math
-from collections import Sequence, namedtuple
+try:
+    from collections import Sequence
+except ImportError:
+    from collections.abc import Sequence
+
+from collections import namedtuple
 from functools import reduce
 import numpy as np
 from typing import Union
