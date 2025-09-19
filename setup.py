@@ -303,8 +303,8 @@ Extension = SOURCE_SETS[target][0]
 SRC_FILES = SOURCE_SETS[target][1]
 BIND_FILES = SOURCE_SETS[target][2]
 ARGS = SOURCE_SETS[target][3]
-CC_FLAGS += ARGS + ["-Wno-error=deprecated-declarations"]
-NVCC_FLAGS += ARGS + ["-Xcompiler", "-Wno-error=deprecated-declarations"]
+CC_FLAGS += ARGS + ["-Wno-error=deprecated-declarations", "-include", "disable_nvtx.hpp",]
+NVCC_FLAGS += ARGS + ["-Xcompiler", "-Wno-error=deprecated-declarations", "-include", "disable_nvtx.hpp",]
 
 
 ext_modules = [
